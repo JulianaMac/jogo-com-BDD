@@ -9,6 +9,8 @@ Jogo construído em Javascript para que o usuário adivinhe um número randômic
 git clone https://github.com/JulianaMac/jogo-com-BDD.git
 cd testes
 npm install
+npm install chai
+npm install mocha
 npm start
 
 ```
