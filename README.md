@@ -1,6 +1,6 @@
 # Jogo - Adivinhar número de 1 a 100
 
-Jogo construído em Javascript para que o usuário adivinhe o número.
+Jogo construído em Javascript para que o usuário adivinhe um número randômico gerado pelo jogo.
 
 
 ## Instalação:
@@ -14,4 +14,4 @@ npm start
 ```
 ## Instruções:
 
-- Digite um número de 1 a 100.
+- Através do Terminal, digite um número de 1 a 100.
