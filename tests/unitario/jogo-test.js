@@ -4,7 +4,7 @@ const expect = chai.expect
 
 describe('Jogo | Unit', () => {
   context('quando número gerado for maior que o número inserido', () => {
-    it('retorna a mensagem "Tente um número menor!"', () => {
+    it('retorna a mensagem "Digite um número menor!"', () => {
       const numeroGerado = 50
       const resposta = 51
 
@@ -14,19 +14,19 @@ describe('Jogo | Unit', () => {
       expect(resultado.mensagemErro)
         .to
         .be
-        .equal('Tente um número menor!')
+        .equal('Digite um número menor!')
     })
   })
 
   context('quando o número gerado for menor que o número inserido', () => {
-    it('retorna a mensagem "Tente um número maior!"', () => {
+    it('retorna a mensagem "Digite um número maior!"', () => {
       const numeroGerado = 50
       const resposta = 47
 
       const resultado = jogo(numeroGerado, resposta)
 
       expect(resultado).to.be.an('object')
-      expect(resultado.mensagemErro).to.be.equal('Tente um número maior!')
+      expect(resultado.mensagemErro).to.be.equal('Digite um número maior!')
     })
   })
 
@@ -41,4 +41,16 @@ describe('Jogo | Unit', () => {
       expect(resultado.acertou).to.be.true
     })
   })
+
+context('quando o número gerado for não for um número válido.', () => {
+    it('retorna a mensagem "Não é número válido', () => {
+        const numeroGerado = 50
+        const resposta = 'ola mundo'
+
+        const resultado = jogo(numeroGerado, resposta)
+
+        expect(resultado).to.be.an('object')
+        expect(resultado.mensagemErro).to.be.equal('Não é um número válido!')
+        })
+    })
 })
